@@ -1,14 +1,11 @@
 ﻿
 
-namespace Controllers
+namespace ConsoleApp.Modelos
 {
 
-    public class ProductoController 
+    public class Producto 
     {
 
-        public class Venta
-
-        {
             public int Id { get; set; }
             public string Descripciones { get; set; }
             public double Costo { get; set; }
@@ -16,7 +13,7 @@ namespace Controllers
             public int Stock { get; set; }
             public int IdUsuario { get; set; }
 
-        }
+        
 
     }
 }
