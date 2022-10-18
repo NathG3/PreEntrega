@@ -54,19 +54,6 @@ namespace ADO_Classes
                         listaProducto2.Add(producto2);
 
                     }
-                    //Console.WriteLine();
-                    //Console.WriteLine("---- Informacion Productos vendidos por IdUsuario: {0}",idUsuario);
-                    //foreach (var datUser in listaProducto2)
-                    //{
-                    //    Console.WriteLine("Id Venta es = " + datUser.IdVenta);
-                    //    Console.WriteLine("Id Producto = " + datUser.IdProducto);
-                    //    Console.WriteLine("Stock = " + datUser.Stock);
-                    //    Console.WriteLine("Descripciones = " + datUser.Descripciones);
-                    //    Console.WriteLine("Precio Venta = " + datUser.PrecioVenta);
-                    //    Console.WriteLine("IdUsuario = " + datUser.IdUsuario);
-                    //    Console.WriteLine("--------------");
-
-                    //}
 
                     reader2.Close();
                     connection.Close();

@@ -38,18 +38,8 @@ namespace ADO_Classes
                     else
                     {
                         datosUsuario = new Usuario();
-                        //Console.WriteLine("Nombre de Usuario o Contraseña incorrecta");
-
-                        //Console.WriteLine();
-                        //Console.WriteLine("Id = " + datosUsuario.Id);
-                        //Console.WriteLine("Nombre = " + datosUsuario.Nombre);
-                        //Console.WriteLine("Apellido = " + datosUsuario.Apellido);
-                        //Console.WriteLine("NombreUsuario = " + datosUsuario.NombreUsuario);
-                        //Console.WriteLine("Contraseña = " + datosUsuario.Contraseña);
-                        //Console.WriteLine("Mail = " + datosUsuario.Mail);
-                        //Console.WriteLine("--------------");
-
                     }
+
                     reader4.Close();
                     connection.Close();
 

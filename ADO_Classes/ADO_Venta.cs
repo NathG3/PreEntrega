@@ -47,17 +47,7 @@ namespace ADO_Classes
                         listaVentas.Add(venta);
 
                     }
-                    
-                    //Console.WriteLine();
-                    //Console.WriteLine("---- Informacion venta IdUsuario: {0} ", idUsuario);
-                    //foreach (var datVenta in listaVentas)
-                    //{
-                    //    Console.WriteLine("Id del Venta= " + datVenta.Id);
-                    //    Console.WriteLine("Comentarios = " + datVenta.Comentarios);
-                    //    Console.WriteLine("IdUsuario = " + datVenta.IdUsuario);
-                    //    Console.WriteLine("--------------");
 
-                    //}
 
                     reader3.Close();
                     connection.Close();
