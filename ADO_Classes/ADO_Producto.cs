@@ -50,18 +50,18 @@ namespace ADO_Classes
                         listaProducto.Add(producto);
 
                     }
-                    Console.WriteLine();
-                    Console.WriteLine("---- Informacion Productos IdUsuario: {0} ", idUsuario);
-                    foreach (var datUser in listaProducto)
-                    {
-                        Console.WriteLine("Id del Producto= " + datUser.Id);
-                        Console.WriteLine("Descripciones = " + datUser.Descripciones);
-                        Console.WriteLine("Costo = " + datUser.Costo);
-                        Console.WriteLine("PrecioVenta = " + datUser.PrecioVenta);
-                        Console.WriteLine("Stock = " + datUser.Stock);
-                        Console.WriteLine("--------------");
+                    //Console.WriteLine();
+                    //Console.WriteLine("---- Informacion Productos IdUsuario: {0} ", idUsuario);
+                    //foreach (var datUser in listaProducto)
+                    //{
+                    //    Console.WriteLine("Id del Producto= " + datUser.Id);
+                    //    Console.WriteLine("Descripciones = " + datUser.Descripciones);
+                    //    Console.WriteLine("Costo = " + datUser.Costo);
+                    //    Console.WriteLine("PrecioVenta = " + datUser.PrecioVenta);
+                    //    Console.WriteLine("Stock = " + datUser.Stock);
+                    //    Console.WriteLine("--------------");
 
-                    }
+                    //}
 
                     reader.Close();
                     connection.Close();

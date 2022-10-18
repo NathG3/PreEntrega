@@ -48,16 +48,16 @@ namespace ADO_Classes
 
                      
 
-                        Console.WriteLine();
-                        Console.WriteLine("---- Informacion del Usuario: {0}", nombreUsuario);
+                        //Console.WriteLine();
+                        //Console.WriteLine("---- Informacion del Usuario: {0}", nombreUsuario);
                        
-                            Console.WriteLine("Id = " + usuario.Id);
-                            Console.WriteLine("Nombre = " + usuario.Nombre);
-                            Console.WriteLine("Apellido = " + usuario.Apellido);
-                            Console.WriteLine("NombreUsuario = " + usuario.NombreUsuario);
-                            Console.WriteLine("Contraseña = " + usuario.Contraseña);
-                            Console.WriteLine("Mail = " + usuario.Mail);
-                            Console.WriteLine("--------------");
+                        //    Console.WriteLine("Id = " + usuario.Id);
+                        //    Console.WriteLine("Nombre = " + usuario.Nombre);
+                        //    Console.WriteLine("Apellido = " + usuario.Apellido);
+                        //    Console.WriteLine("NombreUsuario = " + usuario.NombreUsuario);
+                        //    Console.WriteLine("Contraseña = " + usuario.Contraseña);
+                        //    Console.WriteLine("Mail = " + usuario.Mail);
+                        //    Console.WriteLine("--------------");
 
                         
                     }
