@@ -1,19 +1,15 @@
-﻿using System.Data;
+﻿using ConsoleApp.Modelos;
+using System.Data;
 using System.Data.SqlClient;
-using static Controllers.UsuarioController;
+
 
 namespace ADO_Classes
 {
     public class ADO_InicioSesion
     {
-        public static List<Usuario> InicioSesion()
+        public static Usuario InicioSesion(string nombreUsuario, string contraseña)
         {
-            var datosUsuario = new List<Usuario>();
-
-            Console.WriteLine("Por favor ingrese el nombre de usuario:");
-            string nombreUsu = Console.ReadLine();
-            Console.WriteLine("Por favor ingrese la contraseña:");
-            string contraseña = Console.ReadLine();
+            var datosUsuario = new Usuario();
 
             {
                 SqlConnectionStringBuilder conecctionbuilder = new SqlConnectionStringBuilder();
@@ -28,20 +24,33 @@ namespace ADO_Classes
                     cmd.CommandText =
                         "SELECT * FROM Usuario where NombreUsuario = @NombreUsu and Contraseña = @Contraseña";
 
-                    cmd.Parameters.Add(new SqlParameter("NombreUsu", nombreUsu));
+                    cmd.Parameters.Add(new SqlParameter("NombreUsu", nombreUsuario));
                     cmd.Parameters.Add(new SqlParameter("Contraseña", contraseña));
 
                     var reader4 = cmd.ExecuteReader();
 
                     if (reader4.HasRows)
                     {
-                        ADO_Usuario.TraerUsuario(nombreUsu);
+
+                        datosUsuario = ADO_Usuario.TraerUsuario(nombreUsuario);
+
                     }
                     else
+                    {
                         Console.WriteLine("Nombre de Usuario o Contraseña incorrecta");
 
-                    reader4.Close();
-                    connection.Close();
+                        Console.WriteLine();
+                        Console.WriteLine("Id = " + datosUsuario.Id);
+                        Console.WriteLine("Nombre = " + datosUsuario.Nombre);
+                        Console.WriteLine("Apellido = " + datosUsuario.Apellido);
+                        Console.WriteLine("NombreUsuario = " + datosUsuario.NombreUsuario);
+                        Console.WriteLine("Contraseña = " + datosUsuario.Contraseña);
+                        Console.WriteLine("Mail = " + datosUsuario.Mail);
+                        Console.WriteLine("--------------");
+                        reader4.Close();
+                        connection.Close();
+                    }
+
 
                     return datosUsuario;
                 }

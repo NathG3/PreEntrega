@@ -1,9 +1,7 @@
 ﻿
-using Controllers;
+using ConsoleApp.Modelos;
 using System.Data;
 using System.Data.SqlClient;
-using static Controllers.VentaController;
-
 
 namespace ADO_Classes
 

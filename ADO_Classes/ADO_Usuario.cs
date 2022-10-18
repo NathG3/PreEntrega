@@ -1,15 +1,16 @@
-﻿using System.Data;
+﻿using ConsoleApp.Modelos;
+using System.Data;
 using System.Data.SqlClient;
-using static Controllers.UsuarioController;
+
 
 namespace ADO_Classes
 {
     public class ADO_Usuario
     {
 
-        public static List<Usuario> TraerUsuario(string nombreUsuario)
+        public static Usuario TraerUsuario(string nombreUsuario)
         {
-            var datosUsuario = new List<Usuario>();
+            var usuario = new Usuario();
 
 
             {
@@ -33,9 +34,10 @@ namespace ADO_Classes
 
                     var reader = cmd.ExecuteReader();
 
+
                     while (reader.Read())
                     {
-                        var usuario = new Usuario();
+                        
 
                         usuario.Id = Convert.ToInt32(reader.GetValue(0));
                         usuario.Nombre = reader.GetValue(1).ToString();
@@ -44,12 +46,11 @@ namespace ADO_Classes
                         usuario.Contraseña = reader.GetValue(4).ToString();
                         usuario.Mail = reader.GetValue(5).ToString();
 
-                        datosUsuario.Add(usuario);
+                     
 
                         Console.WriteLine();
                         Console.WriteLine("---- Informacion del Usuario: {0}", nombreUsuario);
-                        foreach (var datUser in datosUsuario)
-                        {
+                       
                             Console.WriteLine("Id = " + usuario.Id);
                             Console.WriteLine("Nombre = " + usuario.Nombre);
                             Console.WriteLine("Apellido = " + usuario.Apellido);
@@ -58,14 +59,14 @@ namespace ADO_Classes
                             Console.WriteLine("Mail = " + usuario.Mail);
                             Console.WriteLine("--------------");
 
-                        }
+                        
                     }
                     reader.Close();
                     connection.Close();
 
 
 
-                    return datosUsuario;
+                    return usuario;
 
 
                 }

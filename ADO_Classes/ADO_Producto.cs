@@ -1,9 +1,7 @@
 ﻿
-using Controllers;
+using ConsoleApp.Modelos;
 using System.Data;
 using System.Data.SqlClient;
-using static Controllers.ProductoController;
-
 
 namespace ADO_Classes
 
@@ -11,9 +9,9 @@ namespace ADO_Classes
     public class ADO_Producto
     {
 
-        public static List<Venta> DevolverProducto(int idUsuario)
+        public static List<Producto> DevolverProducto(int idUsuario)
         {
-            var listaProducto = new List<Venta>();
+            var listaProducto = new List<Producto>();
 
 
             {
@@ -40,7 +38,7 @@ namespace ADO_Classes
 
                     while (reader.Read())
                     {
-                        var producto = new Venta();
+                        var producto = new Producto();
 
                         producto.Id = Convert.ToInt32(reader.GetValue(0));
                         producto.Descripciones = reader.GetValue(1).ToString();

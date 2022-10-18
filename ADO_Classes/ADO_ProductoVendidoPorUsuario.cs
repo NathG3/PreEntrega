@@ -1,9 +1,7 @@
 ﻿
-using Controllers;
+using ConsoleApp.Modelos;
 using System.Data;
 using System.Data.SqlClient;
-using static Controllers.ProductoVendidoPorUsuarioController;
-
 
 namespace ADO_Classes
 
@@ -11,9 +9,9 @@ namespace ADO_Classes
     public class ADO_ProductoVendidoPorUsuario
     {
 
-        public static List<ProductoVendidoPorUsuarioController> DevolverProductoVendidoPorUser(int idUsuario)
+        public static List<ProductoVendidoPorUsuario> DevolverProductoVendidoPorUser(int idUsuario)
         {
-            var listaProducto2 = new List<ProductoVendidoPorUsuarioController>();
+            var listaProducto2 = new List<ProductoVendidoPorUsuario>();
             
             string cmdString = "SELECT pv.IdVenta, pv.IdProducto, pv.Stock, pr.Descripciones, " +
                 "pr.PrecioVenta, pr.IdUsuario FROM ProductoVendido as pv inner join Producto " +
@@ -43,7 +41,7 @@ namespace ADO_Classes
                     while (reader2.Read())
                     {
                         
-                        var producto2 = new ProductoVendidoPorUsuarioController();
+                        var producto2 = new ProductoVendidoPorUsuario();
 
                         producto2.IdVenta = Convert.ToInt32(reader2.GetValue(0));
                         producto2.IdProducto = Convert.ToInt32(reader2.GetValue(1));
@@ -82,42 +80,3 @@ namespace ADO_Classes
         }
     }
 }
-
-
-
-//foreach (var idUser in listaProducto2)
-//{
-
-//    Console.WriteLine(idUser.ToString());
-
-//    //Console.WriteLine(listaProducto2.ToString());
-//    //Console.WriteLine(listaProducto2);
-//    SqlCommand cmd3 = connection.CreateCommand();
-//    cmd2.CommandText = "SELECT * FROM ProductoVendido where IdProducto = @idPrd";
-
-//    var parametro2 = new SqlParameter();
-//    parametro.ParameterName = "idPrd";
-//    parametro.SqlDbType = SqlDbType.BigInt;
-//    parametro.Value = idUser;
-
-//    cmd2.Parameters.Add(parametro);
-
-//    var reader3 = cmd3.ExecuteReader();
-
-//    while (reader3.Read())
-//    {
-//        var producto2 = new ProductoVendidoPorUsuario();
-
-//        producto2.IdVenta = Convert.ToInt32(reader3.GetValue(0));
-//        producto2.IdProducto = Convert.ToInt32(reader3.GetValue(1));
-//        producto2.Stock = Convert.ToInt32(reader3.GetValue(2));
-//        producto2.Descripciones = reader2.GetValue(3).ToString();
-//        producto2.PrecioVenta = Convert.ToDouble(reader3.GetValue(4));
-
-
-
-//        listaProducto3.Add(producto2);
-
-
-
-//    }
