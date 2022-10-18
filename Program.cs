@@ -8,7 +8,7 @@ class Program
     static void Main(string[] args)
     {
 
-        string nombreUsuario = "tcasazzas";
+        string nombreUsuario = "tcasazza";
         string contraseña = "NewPass";
         int idUsuario = 1;
 
@@ -17,6 +17,8 @@ class Program
         ADO_ProductoVendidoPorUsuario.DevolverProductoVendidoPorUser(idUsuario);
         ADO_Venta.TraerVentaPorUsuario(idUsuario);
         ADO_InicioSesion.InicioSesion(nombreUsuario, contraseña);
+
+
 
 
 
