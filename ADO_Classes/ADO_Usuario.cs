@@ -13,7 +13,6 @@ namespace ADO_Classes
             var usuario = new Usuario();
 
 
-            {
                 SqlConnectionStringBuilder conecctionbuilder = new SqlConnectionStringBuilder();
                 conecctionbuilder.DataSource = "LAPTOP-OV95KCR8";
                 conecctionbuilder.InitialCatalog = "SistemaGestion";
@@ -57,7 +56,6 @@ namespace ADO_Classes
 
 
                 }
-            }
         }
     }
 }

@@ -16,7 +16,7 @@ namespace ADO_Classes
             string cmdString = "SELECT pv.IdVenta, pv.IdProducto, pv.Stock, pr.Descripciones, " +
                 "pr.PrecioVenta, pr.IdUsuario FROM ProductoVendido as pv inner join Producto " +
                 "as pr ON pv.IdProducto = pr.Id WHERE IdUsuario = @idUsu";
-            {
+            
                 SqlConnectionStringBuilder conecctionbuilder = new SqlConnectionStringBuilder();
                 conecctionbuilder.DataSource = "LAPTOP-OV95KCR8";
                 conecctionbuilder.InitialCatalog = "SistemaGestion";
@@ -63,7 +63,7 @@ namespace ADO_Classes
 
 
                 }
-            }
+            
         }
     }
 }

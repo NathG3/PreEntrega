@@ -12,9 +12,7 @@ namespace ADO_Classes
         public static List<Venta> TraerVentaPorUsuario(int idUsuario)
         {
             var listaVentas = new List<Venta>();
-
-
-            {
+          
                 SqlConnectionStringBuilder conecctionbuilder = new SqlConnectionStringBuilder();
                 conecctionbuilder.DataSource = "LAPTOP-OV95KCR8";
                 conecctionbuilder.InitialCatalog = "SistemaGestion";
@@ -55,7 +53,7 @@ namespace ADO_Classes
                     return listaVentas;
 
                 }
-            }
+            
         }
     }
 }
